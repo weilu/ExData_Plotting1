@@ -22,5 +22,5 @@ with(data, {
 })
 
 # save the plot as png
-dev.copy(png, file = file.path("output", "plot4.png"))
+dev.copy(png, "plot4.png")
 dev.off()
