@@ -18,7 +18,6 @@ loadData <- function(force=F) {
 
   # format columns
   data$DateTime <-as.POSIXct(paste(data$Date, data$Time), format="%e/%m/%Y %H:%M:%S")
-  data$Global_active_power <- as.numeric(data$Global_active_power)
 
   # subset to first two days of Feb
   dataSubset <<- data[data$DateTime >= as.POSIXct("2007-02-01") & data$DateTime < as.POSIXct("2007-02-03"), ]
