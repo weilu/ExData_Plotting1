@@ -12,7 +12,8 @@ loadData <- function(force=F) {
     return(dataSubset)
   }
 
-  # This file is downloaded & unzipped from https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+  # This file is downloaded from https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+  unzip(file.path('data', 'exdata-data-household_power_consumption.zip'), exdir='data')
   data <- read.csv(file.path("data", "household_power_consumption.txt"), sep=";", na.strings="?")
 
   # format columns
